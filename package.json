@@ -13,11 +13,16 @@
     "start-server": "live-server",
     "start": "npm-run-all build start-server"
   },
-  "keywords": ["auction", "site", "bootstrap", "sass"],
+  "keywords": [
+    "auction",
+    "site",
+    "bootstrap",
+    "sass"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.3.3",
     "live-server": "^1.2.2"
   },
   "devDependencies": {
