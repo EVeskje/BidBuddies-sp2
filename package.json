@@ -9,13 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf dist/css",
-    "build": "npm-run-all clean build-css",
-    "build-css": "sass src/scss:dist/css",
-    "watch": "npm-run-all --parallel watch-css start-server",
-    "watch-css": "sass --watch src/scss:dist/css",
-    "start-server": "live-server",
-    "start": "npm-run-all build start-server"
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "start": "live-server"
   },
   "repository": {
     "type": "git",
