@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/EVeskje/BidBuddies-sp2/issues"
   },
-  "homepage": "https://github.com/EVeskje/BidBuddies-sp2#readme"
+  "homepage": "https://github.com/EVeskje/BidBuddies-sp2#readme",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
 }
