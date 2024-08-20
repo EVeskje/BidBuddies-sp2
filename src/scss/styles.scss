@@ -1,0 +1,91 @@
+// Imports
+@import "variables"; // /src/scss/_variables.scss
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Base Styles
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $gray-100;
+    font-family: 'Urbanist', sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Urbanist', serif;
+    font-weight: 600;
+}
+
+p, label, input, ul, button {
+    font-family: 'Urbanist', sans-serif;
+}
+
+// Header Styles
+.navbar-brand {
+    font-family: 'Urbanist', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+.dropdown-item {
+    font-weight: 600;
+}
+
+// Listings Styles
+#listings-page {
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .bid-color {
+        color: $blue;
+    }
+
+    .bid-section {
+        input {
+            padding: 5px;
+            float: left;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 5px 20px;
+            margin: 0 20px 10px 10px;
+            float: right;
+            background-color: $orange;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.countdown {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+// Profile Styles
+.card {
+    background-color: $gray-100;
+    border: none;
+}
+
+// Footer Styles
+footer {
+    color: $gray-700;
+}

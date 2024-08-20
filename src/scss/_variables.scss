@@ -1,0 +1,48 @@
+// Base Color Variables
+$white:  #FFFFFF !default;
+$black:  #000000 !default;
+
+// Gray Scale Color Variables
+$gray-100:  #F0F2F5 !default;
+$gray-200:  #E1E5EA !default;
+$gray-300:  #CCD1D9 !default;
+$gray-400:  #B2B9C1 !default;
+$gray-500:  #9AA1A8 !default;
+$gray-600:  #6C737A !default;
+$gray-700:  #51565C !default;
+$gray-800:  #3B3F44 !default;
+$gray-900:  #212529 !default;
+
+// Primary Color Palette
+$blue:     #003754 !default;
+$indigo:   #636FA4 !default;
+$purple:   #8D6CAB !default;
+$pink:     #D98C97 !default;
+$red:      #D9534F !default;
+$orange:   #b06533 !default;
+$yellow:   #F6E58D !default;
+$green:    #6ABF69 !default;
+$teal:     #4CB6B2 !default;
+$cyan:     #5CA3A8 !default;
+
+// Custom Colors for Modern Minimalistic Design
+$primary:   $blue !default;
+$secondary: $gray-900 !default;
+$success:   $green !default;
+$info:      $cyan !default;
+$warning:   $yellow !default;
+$danger:    $red !default;
+$light:     $gray-100 !default;
+$dark:      $gray-800 !default;
+
+// Theme Colors Collection
+$theme-colors: (
+  "primary":   $primary,
+  "secondary": $secondary,
+  "success":   $success,
+  "info":      $info,
+  "warning":   $warning,
+  "danger":    $danger,
+  "light":     $light,
+  "dark":      $dark,
+) !default;
