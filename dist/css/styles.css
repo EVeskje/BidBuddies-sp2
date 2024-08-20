@@ -11889,23 +11889,27 @@ p, label, input, ul, button {
   height: 200px;
   object-fit: cover;
 }
-#listings-page .bid-color {
+
+.bid-color {
   color: #003754;
 }
-#listings-page .bid-section input {
+
+.bid-section input {
   padding: 5px;
   float: left;
   border-radius: 5px;
 }
-#listings-page .bid-section button {
+
+.bid-section button {
   padding: 5px 20px;
-  margin: 0 20px 10px 10px;
+  margin: 0px 20px 10px 10px;
   float: right;
   background-color: #b06533;
   text-transform: uppercase;
   font-weight: 600;
 }
-#listings-page .bid-section button:hover {
+
+.bid-section button:hover {
   opacity: 0.8;
 }
 

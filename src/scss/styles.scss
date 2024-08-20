@@ -46,38 +46,33 @@ p, label, input, ul, button {
 }
 
 // Listings Styles
-#listings-page {
-    .card-img-top {
-        height: 200px;
-        object-fit: cover;
-    }
-    
-    .bid-color {
-        color: $blue;
-    }
-
-    .bid-section {
-        input {
-            padding: 5px;
-            float: left;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 5px 20px;
-            margin: 0 20px 10px 10px;
-            float: right;
-            background-color: $orange;
-            text-transform: uppercase;
-            font-weight: 600;
-
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-    }
+#listings-page .card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
+.bid-color {
+    color: $blue;
+  }
+
+.bid-section input {
+    padding: 5px;
+    float: left;
+    border-radius: 5px;
+}
+
+.bid-section button {
+    padding: 5px 20px;
+    margin: 0px 20px 10px 10px;
+    float: right;
+    background-color: $orange;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.bid-section button:hover {
+    opacity: 0.8;
+}
 .countdown {
     font-size: 0.9rem;
     font-weight: bold;
