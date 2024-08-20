@@ -11881,6 +11881,10 @@ p, label, input, ul, button {
   font-weight: 600;
 }
 
+.bid-color {
+  color: #003754;
+}
+
 #listings-page .card-img-top {
   height: 200px;
   object-fit: cover;
