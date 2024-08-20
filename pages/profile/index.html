@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The profile page of BidBuddies" />
+  <title>BidBuddies | Profile</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
+
+  <!-- JS and CSS -->
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <script type="module" src="/js/api/profile/profile.js"></script>
+  <script
+   defer
+   src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/js/logout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+  <!-- Header -->
+  <header>
+   <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+     <a class="navbar-brand text-primary" href="/pages/listings/index.html"
+      >BidBuddies</a
+     >
+     <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+     <!-- Navigation Links -->
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="/pages/listings/index.html">Listings</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" id="logout-button" href="/index.html">Log out</a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+  </header>
+
+  <main>
+   <div class="container py-5">
+    <div
+     class="card mx-auto my-4 p-4 shadow-lg border border-gray"
+     style="max-width: 700px; max-height: 700px">
+     <div class="text-center">
+      <h1 class="text-primary">My profile</h1>
+     </div>
+     <div class="d-flex justify-content-center p-2">
+      <div class="avatar">
+       <img
+        id="avatar-image"
+        src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png"
+        class="rounded img-fluid"
+        alt="Profile image"
+        style="max-width: 280px; max-height: 250px" />
+      </div>
+     </div>
+
+     <!-- Modal -->
+     <div class="d-flex justify-content-center mb-3">
+      <button
+       type="button"
+       class="btn btn-primary"
+       data-bs-toggle="modal"
+       data-bs-target="#avatarModal">
+       Update Avatar
+      </button>
+     </div>
+
+     <!-- Update avatar -->
+     <div
+      class="modal fade"
+      id="avatarModal"
+      tabindex="-1"
+      aria-labelledby="avatarModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+         <h5 class="modal-title" id="avatarModalLabel">Update Avatar</h5>
+         <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <form class="update-avatar">
+          <div class="mb-3">
+           <label for="update-media" class="form-label">Avatar URL</label>
+           <input
+            type="url"
+            class="form-control"
+            id="update-media"
+            placeholder="Enter new avatar URL"
+            required />
+          </div>
+          <div class="text-center">
+           <button
+            type="submit"
+            class="btn btn-primary"
+            id="submit-update-avatar">
+            Update Avatar
+           </button>
+          </div>
+         </form>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <div class="text-center pb-3">
+      <h3 id="username" class="text-primary">Username</h3>
+     </div>
+
+     <!-- Credits -->
+     <div class="text-center">
+      <div class="d-inline-block">
+       <p class="text-secondary mb-0">Total Credits:</p>
+       <p class="text-primary h3 mb-0" id="total-credits"></p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+   <div class="container">
+    <p>&copy; 2024 BidBuddies</p>
+   </div>
+  </footer>
+ </body>
+</html>

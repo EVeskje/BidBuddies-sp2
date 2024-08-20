@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The listings page of BidBuddies" />
+  <title>BidBuddies | Listings</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
+
+  <!-- JS and CSS -->
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <script type="module" src="/js/api/listings/listings.js"></script>
+  <script
+   defer
+   src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/search.js"></script>
+  <script type="module" src="/js/logout.js"></script>
+  <script type="module" src="/js/api/listings/create.js"></script>
+ </head>
+ <body>
+  <!-- Header -->
+  <header class="fixed-top">
+   <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+     <a class="navbar-brand text-primary" href="/pages/listings/index.html"
+      >BidBuddies</a
+     >
+     <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+     <!-- Navigation Links -->
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="/pages/profile/index.html">Profile</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" id="logout-button" href="/index.html">Log out</a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+  </header>
+
+  <section class="hero-section text-center pt-5">
+   <div class="container pt-5">
+    <h1 class="hero-title display-4">
+     Welcome to <span class="fw-bold bid-color">BidBuddies</span>
+    </h1>
+    <p class="hero-subtitle fs-5">
+     Discover the thrill of auctions and find your next great deal
+    </p>
+    <div class="hero-buttons mt-4">
+     <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#createListingModal">
+      Add Listing
+     </button>
+    </div>
+   </div>
+  </section>
+
+  <main class="mt-5">
+   <section id="listings-page" class="py-4">
+    <div class="container">
+     <div class="d-flex justify-content-center">
+      <h3 class="my-4 text-primary">Listings</h3>
+     </div>
+     <form
+      class="d-flex justify-content-center mb-4"
+      role="search"
+      id="search-form"
+      name="search-form">
+      <div class="input-group w-50">
+       <input
+        class="form-control"
+        name="search"
+        type="text"
+        id="search-input"
+        placeholder="Search"
+        aria-label="Search" />
+       <button class="btn btn-primary" id="search-submit" type="submit">
+        <i class="bi bi-search"></i>
+       </button>
+      </div>
+     </form>
+     <div
+      class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+      id="display-listings"></div>
+    </div>
+   </section>
+  </main>
+
+  <!-- Create Listing Modal -->
+  <div
+   class="modal fade"
+   id="createListingModal"
+   tabindex="-1"
+   aria-labelledby="createListingModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title text-primary" id="createListingModalLabel">
+       Add Listing
+      </h5>
+      <button
+       type="button"
+       class="btn-close"
+       data-bs-dismiss="modal"
+       aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+      <form id="new-listing-form">
+       <div class="mb-3">
+        <label for="inputTitle" class="form-label">Title</label>
+        <input type="text" class="form-control" id="inputTitle" required />
+       </div>
+       <div class="mb-3">
+        <label for="inputDescription" class="form-label">Description</label>
+        <textarea
+         id="inputDescription"
+         name="description"
+         class="form-control"
+         style="height: 100px"
+         required></textarea>
+       </div>
+       <div class="mb-3">
+        <label for="inputMedia1" class="form-label">Media URLs</label>
+        <input type="url" class="form-control" id="inputMedia1" required />
+       </div>
+       <div class="mb-3">
+        <label for="inputEndsAt" class="form-label">Ends At</label>
+        <input
+         type="datetime-local"
+         class="form-control"
+         id="inputEndsAt"
+         name="endsAt"
+         required />
+       </div>
+       <button
+        type="submit"
+        class="btn btn-primary w-100"
+        id="submit-new-listing">
+        Submit
+       </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <section class="cta-section bg-primary text-white text-center py-5">
+   <div class="container">
+    <h2>Ready to collaborate? Start Bidding!</h2>
+    <a href="#" class="btn btn-light btn-lg">Get Started</a>
+   </div>
+  </section>
+
+  <footer class="bg-light text-center py-3">
+   <div class="container">
+    <p>&copy; 2024 BidBuddies</p>
+   </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
+ </body>
+</html>
